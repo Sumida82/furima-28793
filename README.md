@@ -16,6 +16,7 @@
 ### Association
 
 - has_many :items
+- has_many :purchases
 
 ## items テーブル
 
@@ -47,6 +48,7 @@
 ### Association
 
 - belongs_to :item
+- belongs_to :user
 - has_one :sending_destination
 
 ## sending_destinations テーブル
@@ -54,7 +56,7 @@
 | post_code       | string     | null: false |
 | prefecture_code | integer    | null: false |
 | city            | string     | null: false |
-| house_number    | string     | null: false |
+| house_number    | string     |             |
 | building_name   | string     | null: false |
 | phone_number    | string     | null: false |
 | purchase        | references | null: false |
