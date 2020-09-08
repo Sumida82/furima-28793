@@ -20,18 +20,18 @@
 
 ## items テーブル
 
-| Column          | Type       | Options                        |
-| --------------- | ---------- | ------------------------------ |
-| image           | string     | null: false                    |
-| name            | string     | null: false                    |
-| introduction    | text       | null: false                    |
-| category        | integer    | null: false                    |
-| trading_status  | integer    | null: false                    |
-| postage_payer   | integer    | null: false                    |
-| prefecture_code | integer    | null: false                    |
-| preparation_day | integer    | null: false                    |
-| price           | integer    | null: false                    |
-| user            | references | null: false, foreign_key: true |
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| image              | string     | null: false                    |
+| name               | string     | null: false                    |
+| introduction       | text       | null: false                    |
+| category_id        | integer    | null: false                    |
+| trading_status_id  | integer    | null: false                    |
+| postage_payer_id   | integer    | null: false                    |
+| prefecture_code_id | integer    | null: false                    |
+| preparation_day_id | integer    | null: false                    |
+| price              | integer    | null: false                    |
+| user               | references | null: false, foreign_key: true |
 
 ### Association
 

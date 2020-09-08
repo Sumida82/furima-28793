@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(version: 2020_09_07_061102) do
     t.string "image", null: false
     t.string "name", null: false
     t.text "introduction", null: false
-    t.integer "category", null: false
-    t.integer "trading_status", null: false
-    t.integer "postage_paye", null: false
-    t.integer "prefecture_code", null: false
-    t.integer "preparation_day", null: false
+    t.integer "category_id", null: false
+    t.integer "trading_status_id", null: false
+    t.integer "postage_payer_id", null: false
+    t.integer "prefecture_code_id", null: false
+    t.integer "preparation_day_id", null: false
     t.integer "price", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
