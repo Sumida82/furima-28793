@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_item, only: [:edit, :update, :show, :destroy]
+  before_action :set_purchase, only: [:index, :show]
 
   def new
     @item = Item.new
@@ -50,5 +51,8 @@ class ItemsController < ApplicationController
   def set_item
     @item = Item.find(params[:id])
   end
-  
+
+  def set_purchase
+    @purchase = Purchase.pluck(:item_id)
+  end
 end
