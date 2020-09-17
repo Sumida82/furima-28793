@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :set_item, only: [:new, :create]
+  before_action :set_purchase, only: [:new, :create]
   before_action :move_to_index, only: :new
 
   def new
@@ -39,8 +40,15 @@ class OrdersController < ApplicationController
     @item = Item.find(params[:item_id])
   end
 
+  def set_purchase
+    @purchase = Purchase.pluck(:item_id)
+  end
+
   def move_to_index
     if current_user.id == @item.user.id
+      redirect_to root_path
+    end
+    if @purchase.include?(@item.id)
       redirect_to root_path
     end
   end
